@@ -23,6 +23,6 @@ var HRTemplate = Handlebars.compile($('#hr-template').html());
 //* Load products from spreadsheet
 $('#products').sheetrock({
   url: googleSheetURI,
-  query: "select B,C,D,E,F,G",
+  query: "select B,C,D,E,F",
   rowTemplate: HRTemplate
 });
