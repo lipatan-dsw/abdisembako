@@ -69,6 +69,23 @@
     <script src="js/handlebars.min.js"></script>
     <script src="js/sheetrock.min.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        simpleCart.currency({
+        code: "IDR",
+        name: "Indonesian Rupiah",
+        symbol: "Rp",
+        after: true
+    })
+    </script>
+    <script>
+      simpleCart({
+        currency: "IDR",
+        checkout: {
+          type: "PayPal",
+          email: "iryanto.heru@gmail.com",
+        }
+      });
+    </script>
 
   </div>
 
