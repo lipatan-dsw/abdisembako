@@ -15,7 +15,7 @@ jQuery(document).ready(function () {
 });
 
 //* Define spreadsheet URL (make sure you add the #gid=0 for the sheet you want to use)
-var googleSheetURI = 'https://docs.google.com/spreadsheets/d/14-2KOZ0uYqdrGNz24C2ZtQ6tLM3SARLsf1lAVljJq0I/edit#gid=465343501';
+var googleSheetURI = 'https://docs.google.com/spreadsheets/d/14-2KOZ0uYqdrGNz24C2ZtQ6tLM3SARLsf1lAVljJq0I/edit#gid=772225506';
 
 //* Compile the Handlebars template for HR leaders
 var HRTemplate = Handlebars.compile($('#hr-template').html());
@@ -23,6 +23,6 @@ var HRTemplate = Handlebars.compile($('#hr-template').html());
 //* Load products from spreadsheet
 $('#products').sheetrock({
   url: googleSheetURI,
-  query: "select B,C,D,E,F",
+  query: "select A,B,C,D,E,F",
   rowTemplate: HRTemplate
 });
