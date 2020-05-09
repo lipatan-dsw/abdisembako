@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+  <head>
+  <title>Player | Otakudesu</title>
+<meta property="og:title" content="OtakuDesu" />
+<meta property="og:type" content="video.streaming" />
+<meta property="og:url" content="https://otakudesu.org/" />
+<meta property="og:image" content="" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0"/>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+<style>
+html,body{
+height: 100%;
+width: 100%;
+margin: 0;
+overflow:hidden;
+}
+body {
+ margin:0;
+ padding:0;
+ background:#000;
+}
+
+#player {
+ position:absolute;
+ width:100%;
+ height:100% !important;
+}
+</style>
+</head>
+<body >
+<div id="player"></div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://desustream.me/streamotakudesu/jwplayer.js"></script>
+
+<script type="text/javascript">
+function otakudesu(e) {
+    e = JSON.parse(e), jwplayer.key = "2pfYkSNlFjontz1vjlwqMm2rpIHxF9Lp6Pg27Q==";
+    var t = jwplayer("player");
+    t.setup({
+        id: "player",
+        file: e.file,
+        type: "video/mp4",
+        image: e.img,
+        controls: "true",
+        displaytitle: "true",
+        width: "100%",
+        height: "100%",
+        aspectratio: "16:9",
+        fullscreen: "true",
+        autostart: "false",
+        abouttext: "OtakuDesu",
+        aboutlink: "https://otakudesu.org",
+        skin: {
+            name: "bekle"
+        },
+        captions: {
+            color: "#FFFFFF",
+            fontSize: 20,
+            backgroundOpacity: 20
+        }
+    })
+}
+
+otakudesu('{"file":"https://video-downloads.googleusercontent.com/AGQNM9LG2uH3x0KsgnRDYt64HSXkfoy62cNS_p3b6SuCtSIZWinlpOqY5PnL_IJSMIQR7oMrD71lcYEB4AsvQu3Zsmd-wJiI3QGhfBBwtroq40yB-oELCW4Ir92LkNGD4Qx-q947HMKNXtV5gFi4INpyDnRAxX3Pda5XvDIokgdffqypug3auOXdTJNw-tt9xdTyukfxA69ZuK96B9evIanhh5FMTgGfztFueGes2UyYdcrmLVytpFRyRlcYvrqwlZQolt364EwxowlHQU8OKKziWb25Z6FiMW-_H13ebWXyeV-rRl4bE5KN6Ah2GKaDMSPh16pMeuViHz3ANUzg9YrpnOf-NFe7fikZTff-gtWQOjV31QHYEDFpZx1Suk6rCvvqJza1Zqcux24mn8jy7odYWB6jPF3xskxpw-Cazt575cmHACYz28QB3UGhEVtsHdWW1D9B8A_XexfmuZ6PQ380N26TtGK61C3GeLiRh2P08vYjs9FibQlHz65bC7wtDYxUVohJllDrMCnlMq4lrzjab1vLHl9VJRf2wfL9hXW4uc6tj3koz_8adNtW_xCLx8HMsF7z1di5IDtiDzxVqovmodj4r61EfwWhXXu_8cf8DJseSaOZ7215txMjLloOMqf4AsdpAdCGmp2h_duunkupRsoAWFWoh6k_xRWe8loVRHdnlFUUYbhYymyoKHTErnqApNMFCUZqwKlyiovohB27F95lkSXiRH9fHHzZ1PcbWsDLh_QZUcDKBt3ETn4GndOBXA8cJya2ld38c_VQ46qHmEBhABK6HF0dus3A7sRxlaez6RYlooJQq-_dY49IS68D6OMkAYIYC9KIxnsLlfikn4Blm0QX3oxN-4fjffTGK6E8NlJonGA","img":"https://3.bp.blogspot.com/-HXLE46eu_So/XMgl5JncuZI/AAAAAAAADnY/pXaEd04CqzYk4xrR9AIB_r-1qS2Dbbu0QCLcBGAs/s1600/otakudesu-streaming.jpg"}');
+</script>
+</body>
