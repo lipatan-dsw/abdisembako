@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+  <head>
+  <title>Player | Otakudesu</title>
+<meta property="og:title" content="OtakuDesu" />
+<meta property="og:type" content="video.streaming" />
+<meta property="og:url" content="https://otakudesu.org/" />
+<meta property="og:image" content="" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0"/>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+<style>
+html,body{
+height: 100%;
+width: 100%;
+margin: 0;
+overflow:hidden;
+}
+body {
+ margin:0;
+ padding:0;
+ background:#000;
+}
+
+#player {
+ position:absolute;
+ width:100%;
+ height:100% !important;
+}
+</style>
+</head>
+<body >
+<div id="player"></div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://desustream.me/streamotakudesu/jwplayer.js"></script>
+
+<script type="text/javascript">
+function otakudesu(e) {
+    e = JSON.parse(e), jwplayer.key = "2pfYkSNlFjontz1vjlwqMm2rpIHxF9Lp6Pg27Q==";
+    var t = jwplayer("player");
+    t.setup({
+        id: "player",
+        file: e.file,
+        type: "video/mp4",
+        image: e.img,
+        controls: "true",
+        displaytitle: "true",
+        width: "100%",
+        height: "100%",
+        aspectratio: "16:9",
+        fullscreen: "true",
+        autostart: "false",
+        abouttext: "OtakuDesu",
+        aboutlink: "https://otakudesu.org",
+        skin: {
+            name: "bekle"
+        },
+        captions: {
+            color: "#FFFFFF",
+            fontSize: 20,
+            backgroundOpacity: 20
+        }
+    })
+}
+
+otakudesu('{"https://r4---sn-npoeened.googlevideo.com/videoplayback?expire=1589097700&ei=xJi3XqrNFIjKogPBt6m4Ag&ip=125.161.131.128&id=25eef70125e91ee0&itag=15&source=picasa&requiressl=yes&sc=yes&susc=ph&app=fife&mime=video/mp4&dur=0.000&lmt=1589090470283344&cpn=OfGLitMY2BnSzKlV&c=WEB_EMBEDDED_PLAYER&cver=20200508&sparams=expire,ei,ip,id,itag,source,requiressl,susc,app,mime,dur,lmt&sig=AOq0QJ8wRQIhAI2Wt49AxlqWtKA-HZ2iYyuuoAua2HJaBcUL9pRObo_AAiAc_Jc07DNQcWnW0PFH2ep8mjspUoPHqwN8y6q1kSqNQA==&redirect_counter=1&cm2rm=sn-nposz7z&req_id=83b3ad8e6c9536e2&cms_redirect=yes&mh=Fx&mm=34&mn=sn-npoeened&ms=ltu&mt=1589090423&mv=m&mvi=3&pl=26&lsparams=mh,mm,mn,ms,mv,mvi,pl,sc&lsig=AG3C_xAwRAIgRoVWalwmQSBgahmQQZSABrXWDdLZlb4pnAQ28v-wsWECIGpiZ5YirC7cyWXMQ9a-HwHsun0cwp4AFLujWbMYkg1n","img":"https://3.bp.blogspot.com/-HXLE46eu_So/XMgl5JncuZI/AAAAAAAADnY/pXaEd04CqzYk4xrR9AIB_r-1qS2Dbbu0QCLcBGAs/s1600/otakudesu-streaming.jpg"}');
+</script>
+</body>
